@@ -22,7 +22,7 @@ exercises: 2
 ## Your first test
 
 The most basic thing you will want to do in a test is check that an output for a
-function is correct, by checking that it is equal to a certain value.
+function is correct by checking that it is equal to a certain value.
 
 Let's take the `add` function example from the previous chapter and the test we
 conceptualised for it and write it in code.

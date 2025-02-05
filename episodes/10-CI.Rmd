@@ -114,11 +114,9 @@ Now that you have created the `tests.yaml` file, you need to upload it to GitHub
 
 The typical use-case for a CI system is to run the tests whenever a pull request is made to the main branch to add a feature.
 
-- Go to your GitHub repository
-
 <!-- figure
 ![branch protection visual instruction](episodes/fig/github-branch-protection.png) -->
-
+- Go to your GitHub repository
 - Click on the "Settings" tab
 - Scroll down to "Branches"
 - Under "Branch protection rules" / "Branch name pattern" type "main"
