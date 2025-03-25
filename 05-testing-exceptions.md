@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How check that a function raises an exception?
+- How to check that a function raises an exception?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 

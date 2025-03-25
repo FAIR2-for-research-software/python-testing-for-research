@@ -20,7 +20,7 @@ exercises: 2
 
 Software testing is the process of checking that code is working as expected. You may have data processing functions or automations that you use in your work - how do you know that they are doing what you expect them to do?
 
-Software testing is most commonly done by writing code (tests) that check that your code work as expected.
+Software testing is most commonly done by writing code (tests) that check that your code works as expected.
 
 This might seem like a lot of effort, so let's go over some of the reasons you might want to add tests to your project.
 
@@ -38,7 +38,7 @@ def add(a, b):
 
 When writing this function, I made a mistake. I accidentally wrote `a - b` instead of `a + b`. This is a simple mistake, but it could have serious consequences in a project.
 
-When writing the code, I could have tested this function by manually trying it with different input and checking the output, but:
+When writing the code, I could have tested this function by manually trying it with different inputs and checking the output, but:
 
 - This takes time.
 - I might forget to test it again when we make changes to the code later on.

@@ -153,7 +153,7 @@ Here we have told pytest that we want it to compare the output of the `test_plot
 (make sure you are in the base directory in your project and not in the plotting folder)
 
 ```bash
-pytest --mpl-generate-path=plotitng/test_plots
+pytest --mpl-generate-path=plotting/test_plots
 ```
 
 This tells pytest to run the test but instead of comparing the result, it will save the result into the `test_plots` directory for use in future tests.

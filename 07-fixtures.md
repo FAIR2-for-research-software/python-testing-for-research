@@ -22,7 +22,7 @@ When writing more complex tests, you may find that you need to reuse data or obj
 
 Here is an example of a set of tests that re-use the same data a lot.
 We have a class, `Point`, that represents a point in 2D space. We have a few tests that check the behaviour of the class.
-Notice how we have to repeat the extact same setup code in each test.
+Notice how we have to repeat the exact same setup code in each test.
 
 ```python
 
