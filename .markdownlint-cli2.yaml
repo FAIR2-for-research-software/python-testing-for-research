@@ -1,0 +1,23 @@
+config:
+
+  line_length:
+    line_length: 120
+    code_blocks: false
+    tables: false
+  html:
+    allowed_elements:
+      - div
+  no-duplicate-heading: false
+
+globs:
+
+- "**/*.md"
+- "*.md"
+
+ignores:
+
+- "site/**/*.md"
+- ".github/**/*.md"
+- "renv/**/*.md"
+
+fix: true

@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - Why should I test my code?
 
@@ -27,7 +27,7 @@ This might seem like a lot of effort, so let's go over some of the reasons you m
 
 ## Catching bugs
 
-Whether you are writing the occasional script or developing a large software, mistakes are inevitable. Sometimes you don't even know when a mistake creeps into the code, and it gets published. 
+Whether you are writing the occasional script or developing a large software, mistakes are inevitable. Sometimes you don't even know when a mistake creeps into the code, and it gets published.
 
 Consider the following function:
 
@@ -66,10 +66,10 @@ def test_add():
       print("Test failed!")
 ```
 
-Here we check that the function works for a set of test cases. We ensure that it works for positive numbers, negative numbers, and zero. 
+Here we check that the function works for a set of test cases. We ensure that it works for positive numbers, negative numbers, and zero.
 
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 1: What could go wrong?
 
@@ -87,10 +87,10 @@ def gradient(x1, y1, x2, y2):
     return (y2 - y1) / (x2 - x1)
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ## Answer
- 
+
 The first function will incorrectly greet the user, as it is missing a space after "Hello". It would print `HelloAlice!` instead of `Hello Alice!`.
 
 If we wrote a test for this function, we would have noticed that it was not working as expected:
@@ -171,7 +171,7 @@ def drive_car(speed, direction):
    ... # complex car driving code
 
     return speed, direction, brake_status
-   
+
 
 ```
 
@@ -186,7 +186,7 @@ def drive_car(speed, direction):
 :::::::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Automated testing helps to catch hard to spot errors in code & find the root cause of complex issues.
 - Tests reduce the time spent manually verifying (and re-verifying!) that code works.
@@ -194,4 +194,3 @@ def drive_car(speed, direction):
 - Tests are especially useful when working in a team, as they help to ensure that everyone can trust the code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

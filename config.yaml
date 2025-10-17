@@ -86,5 +86,3 @@ profiles:
 # sandpaper and varnish versions) should live
 varnish: RSE-Sheffield/uos-varnish@main
 url: 'https://sylviawhittle.github.io/python-testing-for-research/'
-
-

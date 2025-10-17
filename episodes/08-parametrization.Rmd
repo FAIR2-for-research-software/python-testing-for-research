@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - Is there a better way to test a function with lots of different inputs than writing a separate test for each one?
 
@@ -133,7 +133,7 @@ For example, `pytest.param(0, 0, 2, 0, 1, 1.7320, 6, id="Equilateral triangle")`
 
 This is a much more concise way to write tests for functions that need to be tested with lots of different inputs, especially when there is a lot of repetition in the setup for each of the different test cases.
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge - Practice with Parametrization
 
@@ -153,7 +153,7 @@ def is_prime(n: int) -> bool:
 
 ```
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ```python
 import pytest
@@ -197,10 +197,9 @@ def test_is_prime(n, expected):
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Parametrization is a way to run the same test with different parameters in a concise and more readable way, especially when there is a lot of repetition in the setup for each of the different test cases.
 - Use the `@pytest.mark.parametrize` decorator to define a parametrized test.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

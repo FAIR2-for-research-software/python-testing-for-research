@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How can I automate the testing of my code?
 - What are GitHub Actions?
@@ -75,7 +75,7 @@ on:
 # This is a list of jobs that the action will run. In this case, we have only one job called build.
 jobs:
     build:
-        # This is the environment that the job will run on. In this case, we are using the latest version of Ubuntu, however you can ues other operating systems like Windows or MacOS if you like!
+        # This is the environment that the job will run on. In this case, we are using the latest version of Ubuntu, however you can use other operating systems like Windows or MacOS if you like!
         runs-on: ubuntu-latest
 
         # This is a list of steps that the job will run. Each step is a command that will be executed on the environment.
@@ -88,13 +88,13 @@ jobs:
               uses: actions/setup-python@v3
               with:
                   python-version: "3.10"
-            
+
             # This step installs the dependencies for the project such as pytest, numpy, pandas, etc using the requirements.txt file we created earlier.
             - name: Install dependencies
               run: |
                 python -m pip install --upgrade pip
                 pip install -r requirements.txt
-                    
+
             # This step runs the tests using the pytest command. Remember to use the --mpl and --regtest flags to run the tests that use matplotlib and pytest-regtest.
             - name: Run tests
               run: |
@@ -166,7 +166,7 @@ So now, when you or your team want to make a feature or just update the code, th
 
 This will greatly improve the quality of your code and make it easier to collaborate with others.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Continuous Integration (CI) is the practice of automating the merging of code changes into a project.
 - GitHub Actions is a feature of GitHub that allows you to automate the testing of your code.
@@ -174,4 +174,3 @@ This will greatly improve the quality of your code and make it easier to collabo
 - You can use GitHub Actions to only allow code to be merged into the main branch if the tests pass.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

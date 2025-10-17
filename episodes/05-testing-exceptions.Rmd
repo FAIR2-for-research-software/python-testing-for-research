@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How to check that a function raises an exception?
 
@@ -45,7 +45,7 @@ def test_square_root():
 
 Here, `pytest.raises` is a context manager that checks that the code inside the `with` block raises a `ValueError` exception. If it doesn't, the test fails.
 
-If you want to get more detailled with things, you can test what the error message says too:
+If you want to get more detailed with things, you can test what the error message says too:
 ```python
 
 def test_square_root():
@@ -55,7 +55,7 @@ def test_square_root():
 
 ```
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge : Ensure that the divide function raises a ZeroDivisionError when the denominator is zero.
 
@@ -71,7 +71,7 @@ def divide(numerator, denominator):
 
 - Write a test in `test_calculator.py` that checks that the divide function raises a `ZeroDivisionError` when the denominator is zero.
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ```python
 import pytest
@@ -87,9 +87,8 @@ def test_divide():
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Use `pytest.raises` to check that a function raises an exception.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

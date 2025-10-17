@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - What are the goals of this course?
 
@@ -29,7 +29,7 @@ By the end of this course, you should:
 - Understand how testing can be used to improve code & research reliability
 - Be comfortable with writing basic tests & running them
 - Be able to construct a simple Python project that incorporates tests
-- Be familiar with testing best practices such as unit testing & the AAA pattern 
+- Be familiar with testing best practices such as unit testing & the AAA pattern
 - Be aware of more advanced testing features such as fixtures & parametrization
 - Understand what Continuous Integration is and why it is useful
 - Be able to add testing to a GitHub repository with simple Continuous Integration
@@ -37,7 +37,7 @@ By the end of this course, you should:
 
 ## Code of Conduct
 
-This course is covered by the [Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html). 
+This course is covered by the [Carpentries Code of Conduct](https://docs.carpentries.org/topic_folders/policies/code-of-conduct.html).
 
 As mentioned in the Carpentries Code of Conduct, we encourage you to:
 
@@ -70,11 +70,10 @@ This course uses blocks like the one below to indicate an exercise for you to at
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - This course will teach you how to write effective tests and ensure the quality and reliability of your research software
 - No prior testing experience is required
 - You can catch up on practicals by copying the corresponding folder from the `files` directory of this course's materials
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

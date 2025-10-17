@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How to write a simple test?
 - How to run the test?
@@ -151,13 +151,13 @@ What's more, is that if any of these assert statements fail, it will flag to
 pytest that the test has failed, and pytest will let you know.
 
 
-Make the `add` function return the wrong value, and run the test again to see that the test 
+Make the `add` function return the wrong value, and run the test again to see that the test
 fails and the text turns <span style="color:red">**red**</span> as we expect.
 
 
 So if this was a real testing situation, we would know to investigate the `add` function to see why it's not behaving as expected.
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge 2: Write a test for a multiply function
 
@@ -199,7 +199,7 @@ def test_multiply():
 
 Run the test using `pytest ./` to check that it passes. If it doesn't, don't worry, that's the point of testing - to find bugs in code.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - The `assert` keyword is used to check if a statement is true and is a shorthand for writing `if` statements in tests.
 - Pytest is invoked by running the command `pytest ./` in the terminal.
@@ -208,4 +208,3 @@ Run the test using `pytest ./` to check that it passes. If it doesn't, don't wor
 - It's best practice to write tests in a separate file from the code they are testing. Eg: `scripts.py` and `test_scripts.py`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
