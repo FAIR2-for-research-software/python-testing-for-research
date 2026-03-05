@@ -376,7 +376,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Fixtures</h1>
-        <p>Last updated on 2026-03-03 |
+        <p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/07-fixtures.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -413,7 +413,7 @@ tests.</li>
 <section><h2 class="section-heading" id="repetitiveness-in-tests">Repetitiveness in tests<a class="anchor" aria-label="anchor" href="#repetitiveness-in-tests"></a></h2>
 <hr class="half-width"><p>When writing more complex tests, you may find that you need to reuse
 data or objects across multiple tests.</p>
-<p>Here is an example of a set of tests that re-use the same data a lot.
+<p>Here is an example of a set of tests that reuse the same data a lot.
 We have a class, <code>Point</code>, that represents a point in 2D
 space. We have a few tests that check the behaviour of the class. Notice
 how we have to repeat the exact same setup code in each test.</p>
@@ -432,7 +432,7 @@ how we have to repeat the exact same setup code in each test.</p>
 <span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>   <span class="kw">def</span> move(<span class="va">self</span>, dx, dy):</span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>      <span class="va">self</span>.x <span class="op">+=</span> dx</span>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>      <span class="va">self</span>.y <span class="op">+=</span> dy</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>   </span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>   <span class="kw">def</span> reflect_over_x(<span class="va">self</span>):</span>
 <span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>      <span class="va">self</span>.y <span class="op">=</span> <span class="op">-</span><span class="va">self</span>.y</span>
 <span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a></span>
@@ -844,7 +844,7 @@ provided that the fixtures are imported.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul><li>Fixtures are useful way to store data, objects and automations to
-re-use them in many different tests.</li>
+reuse them in many different tests.</li>
 <li>Fixtures are defined using the <code>@pytest.fixture</code>
 decorator.</li>
 <li>Tests can use fixtures by passing them as arguments.</li>
@@ -923,8 +923,8 @@ any links that you are not going to use.
   "url": "https://sylviawhittle.github.io/python-testing-for-research/07-fixtures.html",
   "identifier": "https://sylviawhittle.github.io/python-testing-for-research/07-fixtures.html",
   "dateCreated": "2024-03-08",
-  "dateModified": "2026-03-03",
-  "datePublished": "2026-03-03"
+  "dateModified": "2026-03-05",
+  "datePublished": "2026-03-05"
 }
 
   </script><script>

@@ -432,7 +432,7 @@
         
 <section id="aio-00-introduction"><p>Content from <a href="00-introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/00-introduction.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -582,7 +582,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-01-why-test-my-code"><p>Content from <a href="01-why-test-my-code.html">Why Test My Code?</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/01-why-test-my-code.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -714,7 +714,7 @@ these functions:</p>
   Answer
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The first function will incorrectly greet the user, as it is missing
 a space after “Hello”. It would print <code>HelloAlice!</code> instead
@@ -825,7 +825,7 @@ use?</li>
 <span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a>   ... <span class="co"># complex car driving code</span></span>
 <span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a></span>
 <span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a>    <span class="cf">return</span> speed, direction, brake_status</span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a>   </span></code></pre>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a></span></code></pre>
 </div>
 </div>
 </div>
@@ -837,7 +837,7 @@ use?</li>
   Answer
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <ul>
 <li><p>We might want to check that the speed is within a safe
@@ -876,7 +876,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-02-simple-tests"><p>Content from <a href="02-simple-tests.html">Simple Tests</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/02-simple-tests.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1043,7 +1043,7 @@ still passes.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1108,7 +1108,7 @@ top of the file like this:</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Solution: </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>There are many different test cases that you could include, but it’s
 important to check that different types of cases are covered. A test for
@@ -1165,7 +1165,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-03-interacting-with-tests"><p>Content from <a href="03-interacting-with-tests.html">Interacting with Tests</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/03-interacting-with-tests.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1335,7 +1335,7 @@ plugins: regtest-2.1.1
 collected 3 items</code></pre>
 <p>But now we see that the tests have failed:</p>
 <pre><code>advanced/test_advanced_calculator.py .                                                                                                                                                                                                                                                                                                                                      [ 33%]
-test_calculator.py F. </code></pre>
+test_calculator.py F.</code></pre>
 <p>These <code>F</code> tells us that a test has failed. The output then
 tells us which test has failed:</p>
 <pre><code>=== FAILURES ===
@@ -1348,8 +1348,8 @@ E       assert -1 == 3
 E       +  where -1 = add(1, 2)
 
 test_calculator.py:21: AssertionError</code></pre>
-<p>This is where we get detailled information about what exactly broke
-in the test.</p>
+<p>This is where we get detailed information about what exactly broke in
+the test.</p>
 <ul>
 <li>The <code>&gt;</code> chevron points to the line that failed in the
 test. In this case, the assertion <code>assert add(1, 2) == 3</code>
@@ -1363,7 +1363,7 @@ to 3. It tells us that -1 is the result of calling
 <li>The final line tells us where the test failed. In this case, it was
 on line 21 of <code>test_calculator.py</code>.</li>
 </ul>
-<p>Using this detailled output, we can quickly find the exact line that
+<p>Using this detailed output, we can quickly find the exact line that
 failed and know the inputs that caused the failure. From there, we can
 examine exactly what went wrong and fix it.</p>
 <p>Finally, pytest prints out a short summary of all the failed
@@ -1473,7 +1473,7 @@ the tests fail where necessary to see what happens.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li><p>Run <code>pytest -v</code> to see more detailed output.</p></li>
@@ -1520,7 +1520,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-04-unit-tests-best-practices"><p>Content from <a href="04-unit-tests-best-practices.html">Unit tests &amp; Testing Practices</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/04-unit-tests-best-practices.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1580,7 +1580,7 @@ function as an example:</p>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(data_negative_removed)):</span>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>        <span class="cf">if</span> data_negative_removed[i] <span class="op">&lt;=</span> maximum_value:</span>
 <span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>            data_maximum_removed.append(data_negative_removed[i])</span>
-<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>    </span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a></span>
 <span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>    <span class="co"># Calculate the mean</span></span>
 <span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>    mean <span class="op">=</span> <span class="bu">sum</span>(data_maximum_removed) <span class="op">/</span> <span class="bu">len</span>(data_maximum_removed)</span>
 <span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a></span>
@@ -1706,10 +1706,10 @@ yourself and others reading your code.</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">def</span> test_calculate_mean():</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="co"># Arrange</span></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>    data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>    </span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
 <span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    <span class="co"># Act</span></span>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    mean <span class="op">=</span> calculate_mean(data)</span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>    </span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a></span>
 <span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a>    <span class="co"># Assert</span></span>
 <span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>    <span class="cf">assert</span> mean <span class="op">==</span> <span class="dv">3</span></span></code></pre>
 </div>
@@ -1747,10 +1747,10 @@ are hard to find and fix.</p>
 <span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a><span class="kw">def</span> test_calculate_mean():</span>
 <span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>    <span class="co"># Arrange</span></span>
 <span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>    </span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
 <span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>    <span class="co"># Act</span></span>
 <span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>    mean <span class="op">=</span> calculate_mean(data)</span>
-<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>    </span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a></span>
 <span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>    <span class="co"># Assert</span></span>
 <span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>    <span class="cf">assert</span> mean <span class="op">==</span> <span class="fl">3.5</span></span></code></pre>
 </div>
@@ -1832,21 +1832,21 @@ project directory</li>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="kw">def</span> randomly_sample_and_filter_participants(</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>    participants: <span class="bu">list</span>, </span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>    sample_size: <span class="bu">int</span>, </span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>    min_age: <span class="bu">int</span>, </span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>    max_age: <span class="bu">int</span>, </span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>    min_height: <span class="bu">int</span>, </span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>    participants: <span class="bu">list</span>,</span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a>    sample_size: <span class="bu">int</span>,</span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a>    min_age: <span class="bu">int</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a>    max_age: <span class="bu">int</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a>    min_height: <span class="bu">int</span>,</span>
 <span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a>    max_height: <span class="bu">int</span></span>
 <span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a>):</span>
 <span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a>    <span class="co">"""Participants is a list of tuples, containing the age and height of each participant</span></span>
 <span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a><span class="co">    participants = [</span></span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co">                      {age: 25, height: 180}, </span></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">                      {age: 30, height: 170}, </span></span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co">                      {age: 35, height: 160}, </span></span>
+<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a><span class="co">                      {age: 25, height: 180},</span></span>
+<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a><span class="co">                      {age: 30, height: 170},</span></span>
+<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a><span class="co">                      {age: 35, height: 160},</span></span>
 <span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a><span class="co">    ]</span></span>
 <span id="cb10-17"><a href="#cb10-17" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a>    </span>
+<span id="cb10-18"><a href="#cb10-18" tabindex="-1"></a></span>
 <span id="cb10-19"><a href="#cb10-19" tabindex="-1"></a>    <span class="co"># Get the indexes to sample</span></span>
 <span id="cb10-20"><a href="#cb10-20" tabindex="-1"></a>    indexes <span class="op">=</span> random.sample(<span class="bu">range</span>(<span class="bu">len</span>(participants)), sample_size)</span>
 <span id="cb10-21"><a href="#cb10-21" tabindex="-1"></a></span>
@@ -1854,13 +1854,13 @@ project directory</li>
 <span id="cb10-23"><a href="#cb10-23" tabindex="-1"></a>    sampled_participants <span class="op">=</span> []</span>
 <span id="cb10-24"><a href="#cb10-24" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> indexes:</span>
 <span id="cb10-25"><a href="#cb10-25" tabindex="-1"></a>        sampled_participants.append(participants[i])</span>
-<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a>    </span>
+<span id="cb10-26"><a href="#cb10-26" tabindex="-1"></a></span>
 <span id="cb10-27"><a href="#cb10-27" tabindex="-1"></a>    <span class="co"># Remove participants that are outside the age range</span></span>
 <span id="cb10-28"><a href="#cb10-28" tabindex="-1"></a>    sampled_participants_age_filtered <span class="op">=</span> []</span>
 <span id="cb10-29"><a href="#cb10-29" tabindex="-1"></a>    <span class="cf">for</span> participant <span class="kw">in</span> sampled_participants:</span>
 <span id="cb10-30"><a href="#cb10-30" tabindex="-1"></a>        <span class="cf">if</span> participant[<span class="st">'age'</span>] <span class="op">&gt;=</span> min_age <span class="kw">and</span> participant[<span class="st">'age'</span>] <span class="op">&lt;=</span> max_age:</span>
 <span id="cb10-31"><a href="#cb10-31" tabindex="-1"></a>            sampled_participants_age_filtered.append(participant)</span>
-<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a>    </span>
+<span id="cb10-32"><a href="#cb10-32" tabindex="-1"></a></span>
 <span id="cb10-33"><a href="#cb10-33" tabindex="-1"></a>    <span class="co"># Remove participants that are outside the height range</span></span>
 <span id="cb10-34"><a href="#cb10-34" tabindex="-1"></a>    sampled_participants_height_filtered <span class="op">=</span> []</span>
 <span id="cb10-35"><a href="#cb10-35" tabindex="-1"></a>    <span class="cf">for</span> participant <span class="kw">in</span> sampled_participants_age_filtered:</span>
@@ -1885,7 +1885,7 @@ project directory</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>The function can be broken down into smaller functions, each of which
 can be tested separately:</p>
@@ -1895,7 +1895,7 @@ can be tested separately:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="im">import</span> random</span>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="kw">def</span> sample_participants(</span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    participants: <span class="bu">list</span>, </span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    participants: <span class="bu">list</span>,</span>
 <span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>    sample_size: <span class="bu">int</span></span>
 <span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>):</span>
 <span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    indexes <span class="op">=</span> random.sample(<span class="bu">range</span>(<span class="bu">len</span>(participants)), sample_size)</span>
@@ -1905,8 +1905,8 @@ can be tested separately:</p>
 <span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a>    <span class="cf">return</span> sampled_participants</span>
 <span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a></span>
 <span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a><span class="kw">def</span> filter_participants_by_age(</span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    participants: <span class="bu">list</span>, </span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    min_age: <span class="bu">int</span>, </span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>    participants: <span class="bu">list</span>,</span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a>    min_age: <span class="bu">int</span>,</span>
 <span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>    max_age: <span class="bu">int</span></span>
 <span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a>):</span>
 <span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>    filtered_participants <span class="op">=</span> []</span>
@@ -1916,8 +1916,8 @@ can be tested separately:</p>
 <span id="cb11-22"><a href="#cb11-22" tabindex="-1"></a>    <span class="cf">return</span> filtered_participants</span>
 <span id="cb11-23"><a href="#cb11-23" tabindex="-1"></a></span>
 <span id="cb11-24"><a href="#cb11-24" tabindex="-1"></a><span class="kw">def</span> filter_participants_by_height(</span>
-<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>    participants: <span class="bu">list</span>, </span>
-<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>    min_height: <span class="bu">int</span>, </span>
+<span id="cb11-25"><a href="#cb11-25" tabindex="-1"></a>    participants: <span class="bu">list</span>,</span>
+<span id="cb11-26"><a href="#cb11-26" tabindex="-1"></a>    min_height: <span class="bu">int</span>,</span>
 <span id="cb11-27"><a href="#cb11-27" tabindex="-1"></a>    max_height: <span class="bu">int</span></span>
 <span id="cb11-28"><a href="#cb11-28" tabindex="-1"></a>):</span>
 <span id="cb11-29"><a href="#cb11-29" tabindex="-1"></a>    filtered_participants <span class="op">=</span> []</span>
@@ -1927,11 +1927,11 @@ can be tested separately:</p>
 <span id="cb11-33"><a href="#cb11-33" tabindex="-1"></a>    <span class="cf">return</span> filtered_participants</span>
 <span id="cb11-34"><a href="#cb11-34" tabindex="-1"></a></span>
 <span id="cb11-35"><a href="#cb11-35" tabindex="-1"></a><span class="kw">def</span> randomly_sample_and_filter_participants(</span>
-<span id="cb11-36"><a href="#cb11-36" tabindex="-1"></a>    participants: <span class="bu">list</span>, </span>
-<span id="cb11-37"><a href="#cb11-37" tabindex="-1"></a>    sample_size: <span class="bu">int</span>, </span>
-<span id="cb11-38"><a href="#cb11-38" tabindex="-1"></a>    min_age: <span class="bu">int</span>, </span>
-<span id="cb11-39"><a href="#cb11-39" tabindex="-1"></a>    max_age: <span class="bu">int</span>, </span>
-<span id="cb11-40"><a href="#cb11-40" tabindex="-1"></a>    min_height: <span class="bu">int</span>, </span>
+<span id="cb11-36"><a href="#cb11-36" tabindex="-1"></a>    participants: <span class="bu">list</span>,</span>
+<span id="cb11-37"><a href="#cb11-37" tabindex="-1"></a>    sample_size: <span class="bu">int</span>,</span>
+<span id="cb11-38"><a href="#cb11-38" tabindex="-1"></a>    min_age: <span class="bu">int</span>,</span>
+<span id="cb11-39"><a href="#cb11-39" tabindex="-1"></a>    max_age: <span class="bu">int</span>,</span>
+<span id="cb11-40"><a href="#cb11-40" tabindex="-1"></a>    min_height: <span class="bu">int</span>,</span>
 <span id="cb11-41"><a href="#cb11-41" tabindex="-1"></a>    max_height: <span class="bu">int</span></span>
 <span id="cb11-42"><a href="#cb11-42" tabindex="-1"></a>):</span>
 <span id="cb11-43"><a href="#cb11-43" tabindex="-1"></a>    sampled_participants <span class="op">=</span> sample_participants(participants, sample_size)</span>
@@ -2072,7 +2072,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-05-testing-exceptions"><p>Content from <a href="05-testing-exceptions.html">Testing for Exceptions</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/05-testing-exceptions.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2139,7 +2139,7 @@ that tries to compute the square root of a negative number.</p>
 <p>Here, <code>pytest.raises</code> is a context manager that checks
 that the code inside the <code>with</code> block raises a
 <code>ValueError</code> exception. If it doesn’t, the test fails.</p>
-<p>If you want to get more detailled with things, you can test what the
+<p>If you want to get more detailed with things, you can test what the
 error message says too:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2221,7 +2221,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-06-testing-data-structures"><p>Content from <a href="06-testing-data-structures.html">Testing Data Structures</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/06-testing-data-structures.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2474,7 +2474,7 @@ anomalies from a list:</p>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> data:</span>
 <span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;=</span> maximum_value <span class="kw">and</span> i <span class="op">&gt;=</span> minimum_value:</span>
 <span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>            result.append(i)</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>    </span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
 <span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
 <p>Then write a test for this function by comparing lists.</p>
@@ -2577,7 +2577,7 @@ the cumulative sum of a numpy array:</p>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="kw">def</span> calculate_cumulative_sum(array: np.ndarray) <span class="op">-&gt;</span> np.ndarray:</span>
 <span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    <span class="co">"""Calculate the cumulative sum of a numpy array"""</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>    </span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a></span>
 <span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>    <span class="co"># don't use the built-in numpy function</span></span>
 <span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    result <span class="op">=</span> np.zeros(array.shape)</span>
 <span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>    result[<span class="dv">0</span>] <span class="op">=</span> array[<span class="dv">0</span>]</span>
@@ -2630,7 +2630,7 @@ the total score of each player in a dictionary:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a></span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="kw">def</span> calculate_player_total_scores(participants: <span class="bu">dict</span>):</span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>    <span class="co">"""Calculate the total score of each player in a dictionary.</span></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
 <span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="co">    Example input:</span></span>
 <span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="co">    {</span></span>
 <span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="co">        "Alice": {</span></span>
@@ -2660,8 +2660,8 @@ the total score of each player in a dictionary:</p>
 <span id="cb13-31"><a href="#cb13-31" tabindex="-1"></a><span class="co">        },</span></span>
 <span id="cb13-32"><a href="#cb13-32" tabindex="-1"></a><span class="co">    }</span></span>
 <span id="cb13-33"><a href="#cb13-33" tabindex="-1"></a><span class="co">    """</span><span class="st">"</span></span>
-<span id="cb13-34"><a href="#cb13-34" tabindex="-1"></a><span class="er">    </span></span>
-<span id="cb13-35"><a href="#cb13-35" tabindex="-1"></a>    <span class="cf">for</span> player <span class="kw">in</span> participants:</span>
+<span id="cb13-34"><a href="#cb13-34" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" tabindex="-1"></a><span class="er">    for player in participants:</span></span>
 <span id="cb13-36"><a href="#cb13-36" tabindex="-1"></a>        participants[player][<span class="st">"total_score"</span>] <span class="op">=</span> np.<span class="bu">sum</span>(participants[player][<span class="st">"scores"</span>])</span>
 <span id="cb13-37"><a href="#cb13-37" tabindex="-1"></a></span>
 <span id="cb13-38"><a href="#cb13-38" tabindex="-1"></a>    <span class="cf">return</span> participants</span></code></pre>
@@ -2734,7 +2734,7 @@ the average score of each player in a pandas DataFrame:</p>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="kw">def</span> calculate_player_average_scores(df: pd.DataFrame) <span class="op">-&gt;</span> pd.DataFrame:</span>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>    <span class="co">"""Calculate the average score of each player in a pandas DataFrame.</span></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a></span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co">    Example input:</span></span>
 <span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co">    |   | player  | score_1 | score_2 |</span></span>
 <span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a><span class="co">    |---|---------|---------|---------|</span></span>
@@ -2828,7 +2828,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-07-fixtures"><p>Content from <a href="07-fixtures.html">Fixtures</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/07-fixtures.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2865,7 +2865,7 @@ tests.</li>
 <hr class="half-width">
 <p>When writing more complex tests, you may find that you need to reuse
 data or objects across multiple tests.</p>
-<p>Here is an example of a set of tests that re-use the same data a lot.
+<p>Here is an example of a set of tests that reuse the same data a lot.
 We have a class, <code>Point</code>, that represents a point in 2D
 space. We have a few tests that check the behaviour of the class. Notice
 how we have to repeat the exact same setup code in each test.</p>
@@ -2884,7 +2884,7 @@ how we have to repeat the exact same setup code in each test.</p>
 <span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>   <span class="kw">def</span> move(<span class="va">self</span>, dx, dy):</span>
 <span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>      <span class="va">self</span>.x <span class="op">+=</span> dx</span>
 <span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a>      <span class="va">self</span>.y <span class="op">+=</span> dy</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>   </span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a></span>
 <span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a>   <span class="kw">def</span> reflect_over_x(<span class="va">self</span>):</span>
 <span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>      <span class="va">self</span>.y <span class="op">=</span> <span class="op">-</span><span class="va">self</span>.y</span>
 <span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a></span>
@@ -3302,7 +3302,7 @@ provided that the fixtures are imported.</p>
 <div class="callout-content">
 <ul>
 <li>Fixtures are useful way to store data, objects and automations to
-re-use them in many different tests.</li>
+reuse them in many different tests.</li>
 <li>Fixtures are defined using the <code>@pytest.fixture</code>
 decorator.</li>
 <li>Tests can use fixtures by passing them as arguments.</li>
@@ -3319,7 +3319,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-08-parametrization"><p>Content from <a href="08-parametrization.html">Parametrization</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/08-parametrization.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3588,7 +3588,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-09-testing-output-files"><p>Content from <a href="09-testing-output-files.html">Regression Testing and Plots</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/09-testing-output-files.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3762,7 +3762,7 @@ to a reference image.</p>
 </div>
 <p>This function takes a list of points to plot, plots them and returns
 the figure produced.</p>
-<p>In order to test that this funciton produces the correct plots, we
+<p>In order to test that this function produces the correct plots, we
 will need to store the correct plots to compare against. - Create a new
 folder called <code>test_plots</code> inside the <code>plotting</code>
 folder. This is where we will store the reference images.</p>
@@ -3838,13 +3838,13 @@ different set of points by adding a 4 to the data:</p>
 <span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a><span class="ex">___</span> test_plot_data ___</span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="ex">Error:</span> Image files did not match.</span>
 <span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a>  <span class="ex">RMS</span> Value: 15.740441786649093</span>
-<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>  <span class="ex">Expected:</span>  </span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a>  <span class="ex">Expected:</span></span>
 <span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a>    <span class="ex">/var/folders/sr/wjtfqr9s6x3bw1s647t649x80000gn/T/tmp6d0p4yvm/test_plotting.test_plot_data/baseline.png</span></span>
-<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>  <span class="ex">Actual:</span>    </span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a>  <span class="ex">Actual:</span></span>
 <span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a>    <span class="ex">/var/folders/sr/wjtfqr9s6x3bw1s647t649x80000gn/T/tmp6d0p4yvm/test_plotting.test_plot_data/result.png</span></span>
 <span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a>  <span class="ex">Difference:</span></span>
 <span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a>    <span class="ex">/var/folders/sr/wjtfqr9s6x3bw1s647t649x80000gn/T/tmp6d0p4yvm/test_plotting.test_plot_data/result-failed-diff.png</span></span>
-<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>  <span class="ex">Tolerance:</span> </span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a>  <span class="ex">Tolerance:</span></span>
 <span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a>    <span class="ex">2</span></span></code></pre>
 </div>
 <p>Notice that the test shows you three image files. (All of these files
@@ -3894,7 +3894,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-10-CI"><p>Content from <a href="10-CI.html">Continuous Integration with GitHub Actions</a></p>
 <hr>
-<p>Last updated on 2026-03-03 |
+<p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/10-CI.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4001,7 +4001,7 @@ run the tests for your code.</p>
 <span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co"># This is a list of jobs that the action will run. In this case, we have only one job called build.</span></span>
 <span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
 <span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">        # This is the environment that the job will run on. In this case, we are using the latest version of Ubuntu, however you can ues other operating systems like Windows or MacOS if you like!</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">        # This is the environment that the job will run on. In this case, we are using the latest version of Ubuntu, however you can use other operating systems like Windows or MacOS if you like!</span></span>
 <span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="at">        </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
 <span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="co">        # This is a list of steps that the job will run. Each step is a command that will be executed on the environment.</span></span>
@@ -4014,13 +4014,13 @@ run the tests for your code.</p>
 <span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="at">              </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v3</span></span>
 <span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="at">              </span><span class="fu">with</span><span class="kw">:</span></span>
 <span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="at">                  </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.10"</span></span>
-<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a><span class="at">            </span></span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a></span>
 <span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a><span class="co">            # This step installs the dependencies for the project such as pytest, numpy, pandas, etc using the requirements.txt file we created earlier.</span></span>
 <span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
 <span id="cb2-29"><a href="#cb2-29" tabindex="-1"></a><span class="fu">              run</span><span class="kw">: </span><span class="ch">|</span></span>
 <span id="cb2-30"><a href="#cb2-30" tabindex="-1"></a>                python -m pip install --upgrade pip</span>
 <span id="cb2-31"><a href="#cb2-31" tabindex="-1"></a>                pip install -r requirements.txt</span>
-<span id="cb2-32"><a href="#cb2-32" tabindex="-1"></a>                    </span>
+<span id="cb2-32"><a href="#cb2-32" tabindex="-1"></a></span>
 <span id="cb2-33"><a href="#cb2-33" tabindex="-1"></a><span class="co">            # This step runs the tests using the pytest command. Remember to use the --mpl and --regtest flags to run the tests that use matplotlib and pytest-regtest.</span></span>
 <span id="cb2-34"><a href="#cb2-34" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run tests</span></span>
 <span id="cb2-35"><a href="#cb2-35" tabindex="-1"></a><span class="fu">              run</span><span class="kw">: </span><span class="ch">|</span></span>
@@ -4034,7 +4034,8 @@ whenever a pull request is made to the main branch.</p>
 <p>Now that you have created the <code>tests.yaml</code> file, you need
 to upload it to GitHub.</p>
 <ul>
-<li>Commit the changes using <code>git add .</code> and
+<li>Commit the changes using
+<code>git add .github/workflows/tests.yaml</code> and
 <code>git commit -m "Add GitHub Action to run tests"</code>
 </li>
 <li>Push the changes to GitHub using
@@ -4086,8 +4087,11 @@ subtracts two numbers, but make it wrong on purpose:</li>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>    <span class="cf">assert</span> subtract(<span class="dv">5</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">2</span></span></code></pre>
 </div>
 <ul>
-<li><p>Commit the changes using <code>git add .</code> and
+<li><p>Commit the changes using <code>git add -u .</code> and
 <code>git commit -m "Add subtract function"</code></p></li>
+<li><p>(The <code>-u</code> flag tells git to add only files that have
+been modified, not new files. This is useful when you may have temporary
+new files that you don’t want to add.)</p></li>
 <li><p>Push the changes to GitHub using
 <code>git push origin subtract</code></p></li>
 <li><p>Now go to your GitHub repository and create a new Pull Request to
@@ -4097,7 +4101,7 @@ merge the <code>subtract</code> branch into <code>main</code></p></li>
 because the test for the <code>subtract</code> function is failing.</p>
 <ul>
 <li>Let’s now fix the test and commit the changes:
-<code>git add .</code> and
+<code>git add -u .</code> and
 <code>git commit -m "Fix subtract function"</code>
 </li>
 <li>Push the changes to GitHub using
@@ -4199,8 +4203,8 @@ any links that you are not going to use.
   "url": "https://sylviawhittle.github.io/python-testing-for-research/aio.html",
   "identifier": "https://sylviawhittle.github.io/python-testing-for-research/aio.html",
   "dateCreated": "2024-03-08",
-  "dateModified": "2026-03-03",
-  "datePublished": "2026-03-03"
+  "dateModified": "2026-03-05",
+  "datePublished": "2026-03-05"
 }
 
   </script><script>

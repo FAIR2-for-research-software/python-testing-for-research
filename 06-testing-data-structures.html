@@ -375,7 +375,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Testing Data Structures</h1>
-        <p>Last updated on 2026-03-03 |
+        <p>Last updated on 2026-03-05 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/06-testing-data-structures.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -624,7 +624,7 @@ anomalies from a list:</p>
 <span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> data:</span>
 <span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a>        <span class="cf">if</span> i <span class="op">&lt;=</span> maximum_value <span class="kw">and</span> i <span class="op">&gt;=</span> minimum_value:</span>
 <span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a>            result.append(i)</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a>    </span>
+<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a></span>
 <span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
 <p>Then write a test for this function by comparing lists.</p>
@@ -727,7 +727,7 @@ the cumulative sum of a numpy array:</p>
 <span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="kw">def</span> calculate_cumulative_sum(array: np.ndarray) <span class="op">-&gt;</span> np.ndarray:</span>
 <span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a>    <span class="co">"""Calculate the cumulative sum of a numpy array"""</span></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a>    </span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a></span>
 <span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a>    <span class="co"># don't use the built-in numpy function</span></span>
 <span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a>    result <span class="op">=</span> np.zeros(array.shape)</span>
 <span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a>    result[<span class="dv">0</span>] <span class="op">=</span> array[<span class="dv">0</span>]</span>
@@ -780,7 +780,7 @@ the total score of each player in a dictionary:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a></span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a><span class="kw">def</span> calculate_player_total_scores(participants: <span class="bu">dict</span>):</span>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>    <span class="co">"""Calculate the total score of each player in a dictionary.</span></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
 <span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="co">    Example input:</span></span>
 <span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="co">    {</span></span>
 <span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="co">        "Alice": {</span></span>
@@ -810,8 +810,8 @@ the total score of each player in a dictionary:</p>
 <span id="cb13-31"><a href="#cb13-31" tabindex="-1"></a><span class="co">        },</span></span>
 <span id="cb13-32"><a href="#cb13-32" tabindex="-1"></a><span class="co">    }</span></span>
 <span id="cb13-33"><a href="#cb13-33" tabindex="-1"></a><span class="co">    """</span><span class="st">"</span></span>
-<span id="cb13-34"><a href="#cb13-34" tabindex="-1"></a><span class="er">    </span></span>
-<span id="cb13-35"><a href="#cb13-35" tabindex="-1"></a>    <span class="cf">for</span> player <span class="kw">in</span> participants:</span>
+<span id="cb13-34"><a href="#cb13-34" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" tabindex="-1"></a><span class="er">    for player in participants:</span></span>
 <span id="cb13-36"><a href="#cb13-36" tabindex="-1"></a>        participants[player][<span class="st">"total_score"</span>] <span class="op">=</span> np.<span class="bu">sum</span>(participants[player][<span class="st">"scores"</span>])</span>
 <span id="cb13-37"><a href="#cb13-37" tabindex="-1"></a></span>
 <span id="cb13-38"><a href="#cb13-38" tabindex="-1"></a>    <span class="cf">return</span> participants</span></code></pre>
@@ -884,7 +884,7 @@ the average score of each player in a pandas DataFrame:</p>
 <span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a></span>
 <span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="kw">def</span> calculate_player_average_scores(df: pd.DataFrame) <span class="op">-&gt;</span> pd.DataFrame:</span>
 <span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a>    <span class="co">"""Calculate the average score of each player in a pandas DataFrame.</span></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">    </span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a></span>
 <span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co">    Example input:</span></span>
 <span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co">    |   | player  | score_1 | score_2 |</span></span>
 <span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a><span class="co">    |---|---------|---------|---------|</span></span>
@@ -1039,8 +1039,8 @@ any links that you are not going to use.
   "url": "https://sylviawhittle.github.io/python-testing-for-research/06-testing-data-structures.html",
   "identifier": "https://sylviawhittle.github.io/python-testing-for-research/06-testing-data-structures.html",
   "dateCreated": "2024-03-08",
-  "dateModified": "2026-03-03",
-  "datePublished": "2026-03-03"
+  "dateModified": "2026-03-05",
+  "datePublished": "2026-03-05"
 }
 
   </script><script>
