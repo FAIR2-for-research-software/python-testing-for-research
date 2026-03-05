@@ -26,5 +26,3 @@ title: 'Reference'
 | Test Coverage | A measure of how much of the code is tested by tests. |
 | Test Driven Development (TDD) | A practice where tests are written before the code that they test. |
 | Unit test | A test that checks the behavior of a single function or method. |
-
-

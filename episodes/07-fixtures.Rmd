@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How to reuse data and objects in tests?
 
@@ -20,7 +20,7 @@ exercises: 2
 
 When writing more complex tests, you may find that you need to reuse data or objects across multiple tests.
 
-Here is an example of a set of tests that re-use the same data a lot.
+Here is an example of a set of tests that reuse the same data a lot.
 We have a class, `Point`, that represents a point in 2D space. We have a few tests that check the behaviour of the class.
 Notice how we have to repeat the exact same setup code in each test.
 
@@ -37,7 +37,7 @@ class Point:
    def move(self, dx, dy):
       self.x += dx
       self.y += dy
-   
+
    def reflect_over_x(self):
       self.y = -self.y
 
@@ -216,7 +216,7 @@ def test_reflect_over_y(point_positive_3_4, point_negative_3_4, point_mixed_3_4)
 
 With the setup code defined in the fixtures, the tests are more concise and it won't take as much effort to add more tests in the future.
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge : Write your own fixture
 
@@ -343,7 +343,7 @@ def test_randomly_sample_and_filter_participants():
 
 - Try making these tests more concise by creating a fixture for the input data.
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ```python
 import pytest
@@ -427,12 +427,11 @@ project_directory/
 
 In this case, the fixtures defined in `conftest.py` can be used in any of the test files in the `tests` directory, provided that the fixtures are imported.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
-- Fixtures are useful way to store data, objects and automations to re-use them in many different tests.
+- Fixtures are useful way to store data, objects and automations to reuse them in many different tests.
 - Fixtures are defined using the `@pytest.fixture` decorator.
 - Tests can use fixtures by passing them as arguments.
 - Fixtures can be placed in a separate file or in the same file as the tests.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

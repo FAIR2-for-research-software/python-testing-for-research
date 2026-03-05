@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How to test for changes in program outputs?
 - How to test for changes in plots?
@@ -70,7 +70,7 @@ def test_very_complex_processing(regtest):
     regtest.write(str(processed_data))
 ```
 
-- Now because we haven't run the test yet, there is no reference output to compare against, 
+- Now because we haven't run the test yet, there is no reference output to compare against,
 so we need to generate it using the `--regtest-generate` flag:
 
 ```bash
@@ -128,7 +128,7 @@ def plot_data(data: list):
 
 This function takes a list of points to plot, plots them and returns the figure produced.
 
-In order to test that this funciton produces the correct plots, we will need to store the correct plots to compare against.
+In order to test that this function produces the correct plots, we will need to store the correct plots to compare against.
 - Create a new folder called `test_plots` inside the `plotting` folder. This is where we will store the reference images.
 
 `pytest-mpl` adds the `@pytest.mark.mpl_image_compare` decorator that is used to compare the output of a test function to a reference image.
@@ -187,13 +187,13 @@ def plot_data(data: list):
 ___ test_plot_data ___
 Error: Image files did not match.
   RMS Value: 15.740441786649093
-  Expected:  
+  Expected:
     /var/folders/sr/wjtfqr9s6x3bw1s647t649x80000gn/T/tmp6d0p4yvm/test_plotting.test_plot_data/baseline.png
-  Actual:    
+  Actual:
     /var/folders/sr/wjtfqr9s6x3bw1s647t649x80000gn/T/tmp6d0p4yvm/test_plotting.test_plot_data/result.png
   Difference:
     /var/folders/sr/wjtfqr9s6x3bw1s647t649x80000gn/T/tmp6d0p4yvm/test_plotting.test_plot_data/result-failed-diff.png
-  Tolerance: 
+  Tolerance:
     2
 ```
 
@@ -213,11 +213,10 @@ This doesn't just work with line plots, but with any type of plot that matplotli
 Testing your plots can be very useful especially if your project allows users to define their own plots.
 
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Regression testing ensures that the output of a function remains consistent between changes and are a great first step in adding tests to an existing project.
 - `pytest-regtest` provides a simple way to do regression testing.
 - `pytest-mpl` provides a simple way to test plots by comparing the output of a test function to a reference image.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

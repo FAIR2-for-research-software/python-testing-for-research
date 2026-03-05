@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do you compare data structures such as lists and dictionaries?
 - How do you compare objects in libraries like `pandas` and `numpy`?
@@ -194,7 +194,7 @@ def test_pandas_series():
 ```
 
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge : Comparing Data Structures
 
@@ -211,13 +211,13 @@ def remove_anomalies(data: list, maximum_value: float, minimum_value: float) -> 
     for i in data:
         if i <= maximum_value and i >= minimum_value:
             result.append(i)
-    
+
     return result
 ```
 
 Then write a test for this function by comparing lists.
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 ```python
 from stats import remove_anomalies
@@ -280,7 +280,7 @@ import numpy as np
 
 def calculate_cumulative_sum(array: np.ndarray) -> np.ndarray:
     """Calculate the cumulative sum of a numpy array"""
-    
+
     # don't use the built-in numpy function
     result = np.zeros(array.shape)
     result[0] = array[0]
@@ -315,7 +315,7 @@ In `statistics/stats.py` add this function to calculate the total score of each 
 
 def calculate_player_total_scores(participants: dict):
     """Calculate the total score of each player in a dictionary.
-    
+
     Example input:
     {
         "Alice": {
@@ -345,7 +345,7 @@ def calculate_player_total_scores(participants: dict):
         },
     }
     """"
-    
+
     for player in participants:
         participants[player]["total_score"] = np.sum(participants[player]["scores"])
 
@@ -401,7 +401,7 @@ import pandas as pd
 
 def calculate_player_average_scores(df: pd.DataFrame) -> pd.DataFrame:
     """Calculate the average score of each player in a pandas DataFrame.
-    
+
     Example input:
     |   | player  | score_1 | score_2 |
     |---|---------|---------|---------|
@@ -460,7 +460,7 @@ def test_calculate_player_average_scores():
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - You can test equality of lists and dictionaries using the `==` operator.
 - Numpy arrays cannot be compared using the `==` operator. Instead, use `numpy.testing.assert_array_equal` and `numpy.testing.assert_allclose`.
@@ -468,4 +468,3 @@ def test_calculate_player_average_scores():
 - Pandas DataFrames and Series should be compared using `pandas.testing.assert_frame_equal` and `pandas.testing.assert_series_equal`.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
