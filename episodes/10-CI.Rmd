@@ -107,7 +107,7 @@ This is a simple GitHub Action that runs the tests for your code whenever a pull
 
 Now that you have created the `tests.yaml` file, you need to upload it to GitHub.
 
-- Commit the changes using `git add .` and `git commit -m "Add GitHub Action to run tests"`
+- Commit the changes using `git add .github/workflows/tests.yaml` and `git commit -m "Add GitHub Action to run tests"`
 - Push the changes to GitHub using `git push origin main`
 
 ## Enable running the tests on a Pull Request
@@ -143,14 +143,16 @@ def test_subtract():
     assert subtract(5, 3) == 2
 ```
 
-- Commit the changes using `git add .` and `git commit -m "Add subtract function"`
+- Commit the changes using `git add -u .` and `git commit -m "Add subtract function"`
+- (The `-u` flag tells git to add only files that have been modified, not new files. This is useful when
+you may have temporary new files that you don't want to add.)
 - Push the changes to GitHub using `git push origin subtract`
 
 - Now go to your GitHub repository and create a new Pull Request to merge the `subtract` branch into `main`
 
 You should see that the GitHub Action runs the tests and fails because the test for the `subtract` function is failing.
 
-- Let's now fix the test and commit the changes: `git add .` and `git commit -m "Fix subtract function"`
+- Let's now fix the test and commit the changes: `git add -u .` and `git commit -m "Fix subtract function"`
 - Push the changes to GitHub using `git push origin subtract` again
 - Go back to the Pull Request on GitHub and you should see that the tests are now passing and you can merge the code into the main branch.
 
