@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do I use pytest to run my tests?
 - What does the output of pytest look like and how do I interpret it?
@@ -102,7 +102,7 @@ collected 3 items
 - This simply tells us that 3 tests have been found and are ready to be run.
 
 ```
-advanced/test_advanced_calculator.py . 
+advanced/test_advanced_calculator.py .
 test_calculator.py ..    [100%]
 ```
 - These two lines tells us that the tests in `test_calculator.py` and `advanced/test_advanced_calculator.py` have passed. Each `.` means that a test has passed. There are two of them beside `test_calculator.py` because there are two tests in `test_calculator.py` If a test fails, it will show an `F` instead of a `.`.
@@ -131,7 +131,7 @@ But now we see that the tests have failed:
 
 ```
 advanced/test_advanced_calculator.py .                                                                                                                                                                                                                                                                                                                                      [ 33%]
-test_calculator.py F. 
+test_calculator.py F.
 ```
 
 These `F` tells us that a test has failed. The output then tells us which test has failed:
@@ -149,14 +149,14 @@ E       +  where -1 = add(1, 2)
 test_calculator.py:21: AssertionError
 ```
 
-This is where we get detailled information about what exactly broke in the test.
+This is where we get detailed information about what exactly broke in the test.
 
 - The `>` chevron points to the line that failed in the test. In this case, the assertion `assert add(1, 2) == 3` failed.
 - The following line tells us what the assertion tried to do. In this case, it tried to assert that the number -1 was equal to 3. Which of course it isn't.
 - The next line goes into more detail about why it tried to equate -1 to 3. It tells us that -1 is the result of calling `add(1, 2)`.
 - The final line tells us where the test failed. In this case, it was on line 21 of `test_calculator.py`.
 
-Using this detailled output, we can quickly find the exact line that failed and know the inputs that caused the failure. From there, we can examine exactly what went wrong and fix it.
+Using this detailed output, we can quickly find the exact line that failed and know the inputs that caused the failure. From there, we can examine exactly what went wrong and fix it.
 
 Finally, pytest prints out a short summary of all the failed tests:
 ```
@@ -182,7 +182,7 @@ Matplotlib: 3.9.0
 Freetype: 2.6.1
 rootdir: /Users/sylvi/Documents/GitKraken/python-testing-for-research/episodes/files/03-interacting-with-tests.Rmd
 plugins: mpl-0.17.0, regtest-2.1.1
-collected 1 item / 1 error   
+collected 1 item / 1 error
 
 === ERRORS ===
 ___ ERROR collecting test_calculator.py ___
@@ -243,7 +243,7 @@ Try running pytest with the above options, editing the code to make the tests fa
 
 :::::::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - You can run multiple tests at once by running `pytest` in the terminal.
 - Pytest searches for tests in files that start or end with 'test' in the current directory and subdirectories.
@@ -251,4 +251,3 @@ Try running pytest with the above options, editing the code to make the tests fa
 - Flags such as `-v`, `-q`, `-k`, and `-x` can be used to get more detailed output, less detailed output, run specific tests, and stop running tests after the first failure, respectively.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

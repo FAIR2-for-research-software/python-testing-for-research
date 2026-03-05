@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - What to do about complex functions & tests?
 - What are some testing best practices for testing?
@@ -40,7 +40,7 @@ def process_data(data: list, maximum_value: float):
     for i in range(len(data_negative_removed)):
         if data_negative_removed[i] <= maximum_value:
             data_maximum_removed.append(data_negative_removed[i])
-    
+
     # Calculate the mean
     mean = sum(data_maximum_removed) / len(data_maximum_removed)
 
@@ -63,7 +63,7 @@ def test_process_data():
 
 ```
 
-This test is very complex and hard to debug if it fails. Imagine if the calculation of the mean broke - the test would fail but it would not tell us what part of the function was broken, requiring us to 
+This test is very complex and hard to debug if it fails. Imagine if the calculation of the mean broke - the test would fail but it would not tell us what part of the function was broken, requiring us to
 check each function manually to find the bug. Not very efficient!
 
 ## Unit Testing
@@ -156,10 +156,10 @@ This makes your tests easier to read and understand for both yourself and others
 def test_calculate_mean():
     # Arrange
     data = [1, 2, 3, 4, 5]
-    
+
     # Act
     mean = calculate_mean(data)
-    
+
     # Assert
     assert mean == 3
 ```
@@ -190,10 +190,10 @@ Here is an example of the TDD process:
 def test_calculate_mean():
     # Arrange
     data = [1, 2, 3, 4, 5]
-    
+
     # Act
     mean = calculate_mean(data)
-    
+
     # Assert
     assert mean == 3.5
 ```
@@ -244,7 +244,7 @@ Random seeds work by setting the initial state of the random number generator.
 This means that if you set the seed to the same value, you will get the same sequence of random numbers each time you run the function.
 
 
-::::::::::::::::::::::::::::::::::::: challenge 
+::::::::::::::::::::::::::::::::::::: challenge
 
 ## Challenge: Write your own unit tests
 
@@ -258,21 +258,21 @@ Take this complex function, break it down and write unit tests for it.
 import random
 
 def randomly_sample_and_filter_participants(
-    participants: list, 
-    sample_size: int, 
-    min_age: int, 
-    max_age: int, 
-    min_height: int, 
+    participants: list,
+    sample_size: int,
+    min_age: int,
+    max_age: int,
+    min_height: int,
     max_height: int
 ):
     """Participants is a list of tuples, containing the age and height of each participant
     participants = [
-                      {age: 25, height: 180}, 
-                      {age: 30, height: 170}, 
-                      {age: 35, height: 160}, 
+                      {age: 25, height: 180},
+                      {age: 30, height: 170},
+                      {age: 35, height: 160},
     ]
     """
-    
+
     # Get the indexes to sample
     indexes = random.sample(range(len(participants)), sample_size)
 
@@ -280,13 +280,13 @@ def randomly_sample_and_filter_participants(
     sampled_participants = []
     for i in indexes:
         sampled_participants.append(participants[i])
-    
+
     # Remove participants that are outside the age range
     sampled_participants_age_filtered = []
     for participant in sampled_participants:
         if participant['age'] >= min_age and participant['age'] <= max_age:
             sampled_participants_age_filtered.append(participant)
-    
+
     # Remove participants that are outside the height range
     sampled_participants_height_filtered = []
     for participant in sampled_participants_age_filtered:
@@ -299,7 +299,7 @@ def randomly_sample_and_filter_participants(
 - Create a new file called `test_stats.py` in the `statistics` directory
 - Write unit tests for the `randomly_sample_and_filter_participants` function in `test_stats.py`
 
-:::::::::::::::::::::::: solution 
+:::::::::::::::::::::::: solution
 
 The function can be broken down into smaller functions, each of which can be tested separately:
 
@@ -307,7 +307,7 @@ The function can be broken down into smaller functions, each of which can be tes
 import random
 
 def sample_participants(
-    participants: list, 
+    participants: list,
     sample_size: int
 ):
     indexes = random.sample(range(len(participants)), sample_size)
@@ -317,8 +317,8 @@ def sample_participants(
     return sampled_participants
 
 def filter_participants_by_age(
-    participants: list, 
-    min_age: int, 
+    participants: list,
+    min_age: int,
     max_age: int
 ):
     filtered_participants = []
@@ -328,8 +328,8 @@ def filter_participants_by_age(
     return filtered_participants
 
 def filter_participants_by_height(
-    participants: list, 
-    min_height: int, 
+    participants: list,
+    min_height: int,
     max_height: int
 ):
     filtered_participants = []
@@ -339,11 +339,11 @@ def filter_participants_by_height(
     return filtered_participants
 
 def randomly_sample_and_filter_participants(
-    participants: list, 
-    sample_size: int, 
-    min_age: int, 
-    max_age: int, 
-    min_height: int, 
+    participants: list,
+    sample_size: int,
+    min_age: int,
+    max_age: int,
+    min_height: int,
     max_height: int
 ):
     sampled_participants = sample_participants(participants, sample_size)
@@ -447,7 +447,7 @@ When time is limited, it's often better to only write tests for the most critica
 
 You should discuss with your team how much of the code you think should be tested, and what the most critical parts of the code are in order to prioritize your time.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Complex functions can be broken down into smaller, testable units.
 - Testing each unit separately is called unit testing.
@@ -457,4 +457,3 @@ You should discuss with your team how much of the code you think should be teste
 - Adding tests to an existing project can be done incrementally, starting with regression tests.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
