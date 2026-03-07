@@ -379,7 +379,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Continuous Integration with GitHub Actions</h1>
-        <p>Last updated on 2026-03-05 |
+        <p>Last updated on 2026-03-07 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/10-CI.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -510,7 +510,8 @@ whenever a pull request is made to the main branch.</p>
 </section><section><h2 class="section-heading" id="upload-the-workflow-to-github">Upload the workflow to GitHub<a class="anchor" aria-label="anchor" href="#upload-the-workflow-to-github"></a></h2>
 <hr class="half-width"><p>Now that you have created the <code>tests.yaml</code> file, you need
 to upload it to GitHub.</p>
-<ul><li>Commit the changes using <code>git add .</code> and
+<ul><li>Commit the changes using
+<code>git add .github/workflows/tests.yaml</code> and
 <code>git commit -m "Add GitHub Action to run tests"</code>
 </li>
 <li>Push the changes to GitHub using
@@ -553,8 +554,11 @@ subtracts two numbers, but make it wrong on purpose:</li>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">def</span> test_subtract():</span>
 <span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>    <span class="cf">assert</span> subtract(<span class="dv">5</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">2</span></span></code></pre>
 </div>
-<ul><li><p>Commit the changes using <code>git add .</code> and
+<ul><li><p>Commit the changes using <code>git add -u .</code> and
 <code>git commit -m "Add subtract function"</code></p></li>
+<li><p>(The <code>-u</code> flag tells git to add only files that have
+been modified, not new files. This is useful when you may have temporary
+new files that you don’t want to add.)</p></li>
 <li><p>Push the changes to GitHub using
 <code>git push origin subtract</code></p></li>
 <li><p>Now go to your GitHub repository and create a new Pull Request to
@@ -562,7 +566,7 @@ merge the <code>subtract</code> branch into <code>main</code></p></li>
 </ul><p>You should see that the GitHub Action runs the tests and fails
 because the test for the <code>subtract</code> function is failing.</p>
 <ul><li>Let’s now fix the test and commit the changes:
-<code>git add .</code> and
+<code>git add -u .</code> and
 <code>git commit -m "Fix subtract function"</code>
 </li>
 <li>Push the changes to GitHub using
@@ -669,8 +673,8 @@ any links that you are not going to use.
   "url": "https://sylviawhittle.github.io/python-testing-for-research/instructor/10-CI.html",
   "identifier": "https://sylviawhittle.github.io/python-testing-for-research/instructor/10-CI.html",
   "dateCreated": "2024-03-08",
-  "dateModified": "2026-03-05",
-  "datePublished": "2026-03-05"
+  "dateModified": "2026-03-07",
+  "datePublished": "2026-03-07"
 }
 
   </script><script>
