@@ -7,7 +7,7 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions
 
 - What to do about complex functions & tests?
-- What are some testing best practices for testing?
+- What are some best practices for testing?
 - How far should I go with testing?
 - How do I add tests to an existing project?
 

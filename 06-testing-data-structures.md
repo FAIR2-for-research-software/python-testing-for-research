@@ -344,7 +344,7 @@ def calculate_player_total_scores(participants: dict):
             "total_score": 24
         },
     }
-    """"
+    """
 
     for player in participants:
         participants[player]["total_score"] = np.sum(participants[player]["scores"])

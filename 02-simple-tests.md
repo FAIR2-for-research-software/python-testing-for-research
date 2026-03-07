@@ -92,7 +92,7 @@ Now, let's run the test. We can do this by running the following command in the 
 This command tells pytest to run all the tests in the current directory.
 
 When you run the test, you should see that the test runs successfully, indicated
-by some <span style="color:green">**green**</span>. text in the terminal. We will go through the output and what it means
+by some <span style="color:green">**green**</span> text in the terminal. We will go through the output and what it means
 in the next lesson, but for now, know that <span style="color:green">**green**</span> means that the test passed, and <span style="color:red">**red**</span>
 means that the test failed.
 
