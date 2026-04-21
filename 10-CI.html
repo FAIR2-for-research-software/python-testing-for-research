@@ -308,7 +308,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#continuous-integration">Continuous Integration</a></li>
 <li><a href="#setting-up-your-project-repository">Setting up your project repository</a></li>
@@ -379,7 +379,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Continuous Integration with GitHub Actions</h1>
-        <p>Last updated on 2026-04-14 |
+        <p>Last updated on 2026-04-21 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/10-CI.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -466,42 +466,42 @@ run the tests for your code.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="co"># This is just the name of the action, you can call it whatever you like.</span></span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Tests (pytest)</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co"># This is the event that triggers the action. In this case, we are telling GitHub to run the tests whenever a pull request is made to the main branch.</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu">on</span><span class="kw">:</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a><span class="at">    </span><span class="fu">pull_request</span><span class="kw">:</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="at">        </span><span class="fu">branches</span><span class="kw">:</span></span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> main</span></span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a><span class="co"># This is a list of jobs that the action will run. In this case, we have only one job called build.</span></span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="fu">jobs</span><span class="kw">:</span></span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a><span class="co">        # This is the environment that the job will run on. In this case, we are using the latest version of Ubuntu, however you can use other operating systems like Windows or MacOS if you like!</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a><span class="at">        </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="co">        # This is a list of steps that the job will run. Each step is a command that will be executed on the environment.</span></span>
-<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a><span class="at">        </span><span class="fu">steps</span><span class="kw">:</span></span>
-<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a><span class="co">            # This command tells GitHub to use a pre-built action. In this case, we are using the actions/checkout action to check out the repository. This just means that GitHub will use this repository's code to run the tests.</span></span>
-<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3</span><span class="co"> # Check out the repository on github</span></span>
-<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="co">            # This is the name of the step. This is just a label that will be displayed in the GitHub UI.</span></span>
-<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python 3.10</span></span>
-<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a><span class="co">              # This command tells GitHub to use a pre-built action. In this case, we are using the actions/setup-python action to set up Python 3.10.</span></span>
-<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a><span class="at">              </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v3</span></span>
-<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a><span class="at">              </span><span class="fu">with</span><span class="kw">:</span></span>
-<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a><span class="at">                  </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.10"</span></span>
-<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a></span>
-<span id="cb2-27"><a href="#cb2-27" tabindex="-1"></a><span class="co">            # This step installs the dependencies for the project such as pytest, numpy, pandas, etc using the requirements.txt file we created earlier.</span></span>
-<span id="cb2-28"><a href="#cb2-28" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
-<span id="cb2-29"><a href="#cb2-29" tabindex="-1"></a><span class="fu">              run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb2-30"><a href="#cb2-30" tabindex="-1"></a>                python -m pip install --upgrade pip</span>
-<span id="cb2-31"><a href="#cb2-31" tabindex="-1"></a>                pip install -r requirements.txt</span>
-<span id="cb2-32"><a href="#cb2-32" tabindex="-1"></a></span>
-<span id="cb2-33"><a href="#cb2-33" tabindex="-1"></a><span class="co">            # This step runs the tests using the pytest command. Remember to use the --mpl and --regtest flags to run the tests that use matplotlib and pytest-regtest.</span></span>
-<span id="cb2-34"><a href="#cb2-34" tabindex="-1"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run tests</span></span>
-<span id="cb2-35"><a href="#cb2-35" tabindex="-1"></a><span class="fu">              run</span><span class="kw">: </span><span class="ch">|</span></span>
-<span id="cb2-36"><a href="#cb2-36" tabindex="-1"></a>                pytest --mpl --regtest</span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="co"># This is just the name of the action, you can call it whatever you like.</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a><span class="fu">name</span><span class="kw">:</span><span class="at"> Tests (pytest)</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="co"># This is the event that triggers the action. In this case, we are telling GitHub to run the tests whenever a pull request is made to the main branch.</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a><span class="fu">on</span><span class="kw">:</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a><span class="at">    </span><span class="fu">pull_request</span><span class="kw">:</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a><span class="at">        </span><span class="fu">branches</span><span class="kw">:</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a><span class="at">            </span><span class="kw">-</span><span class="at"> main</span></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1" aria-label="code-block-2-10"></a><span class="co"># This is a list of jobs that the action will run. In this case, we have only one job called build.</span></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a><span class="fu">jobs</span><span class="kw">:</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1" aria-label="code-block-2-12"></a><span class="at">    </span><span class="fu">build</span><span class="kw">:</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1" aria-label="code-block-2-13"></a><span class="co">        # This is the environment that the job will run on. In this case, we are using the latest version of Ubuntu, however you can use other operating systems like Windows or MacOS if you like!</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1" aria-label="code-block-2-14"></a><span class="at">        </span><span class="fu">runs-on</span><span class="kw">:</span><span class="at"> ubuntu-latest</span></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1" aria-label="code-block-2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1" aria-label="code-block-2-16"></a><span class="co">        # This is a list of steps that the job will run. Each step is a command that will be executed on the environment.</span></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1" aria-label="code-block-2-17"></a><span class="at">        </span><span class="fu">steps</span><span class="kw">:</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1" aria-label="code-block-2-18"></a><span class="co">            # This command tells GitHub to use a pre-built action. In this case, we are using the actions/checkout action to check out the repository. This just means that GitHub will use this repository's code to run the tests.</span></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1" aria-label="code-block-2-19"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/checkout@v3</span><span class="co"> # Check out the repository on github</span></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1" aria-label="code-block-2-20"></a><span class="co">            # This is the name of the step. This is just a label that will be displayed in the GitHub UI.</span></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1" aria-label="code-block-2-21"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Set up Python 3.10</span></span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1" aria-label="code-block-2-22"></a><span class="co">              # This command tells GitHub to use a pre-built action. In this case, we are using the actions/setup-python action to set up Python 3.10.</span></span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1" aria-label="code-block-2-23"></a><span class="at">              </span><span class="fu">uses</span><span class="kw">:</span><span class="at"> actions/setup-python@v3</span></span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1" aria-label="code-block-2-24"></a><span class="at">              </span><span class="fu">with</span><span class="kw">:</span></span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1" aria-label="code-block-2-25"></a><span class="at">                  </span><span class="fu">python-version</span><span class="kw">:</span><span class="at"> </span><span class="st">"3.10"</span></span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1" aria-label="code-block-2-26"></a></span>
+<span id="cb2-27"><a href="#cb2-27" tabindex="-1" aria-label="code-block-2-27"></a><span class="co">            # This step installs the dependencies for the project such as pytest, numpy, pandas, etc using the requirements.txt file we created earlier.</span></span>
+<span id="cb2-28"><a href="#cb2-28" tabindex="-1" aria-label="code-block-2-28"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Install dependencies</span></span>
+<span id="cb2-29"><a href="#cb2-29" tabindex="-1" aria-label="code-block-2-29"></a><span class="fu">              run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb2-30"><a href="#cb2-30" tabindex="-1" aria-label="code-block-2-30"></a>                python -m pip install --upgrade pip</span>
+<span id="cb2-31"><a href="#cb2-31" tabindex="-1" aria-label="code-block-2-31"></a>                pip install -r requirements.txt</span>
+<span id="cb2-32"><a href="#cb2-32" tabindex="-1" aria-label="code-block-2-32"></a></span>
+<span id="cb2-33"><a href="#cb2-33" tabindex="-1" aria-label="code-block-2-33"></a><span class="co">            # This step runs the tests using the pytest command. Remember to use the --mpl and --regtest flags to run the tests that use matplotlib and pytest-regtest.</span></span>
+<span id="cb2-34"><a href="#cb2-34" tabindex="-1" aria-label="code-block-2-34"></a><span class="at">            </span><span class="kw">-</span><span class="at"> </span><span class="fu">name</span><span class="kw">:</span><span class="at"> Run tests</span></span>
+<span id="cb2-35"><a href="#cb2-35" tabindex="-1" aria-label="code-block-2-35"></a><span class="fu">              run</span><span class="kw">: </span><span class="ch">|</span></span>
+<span id="cb2-36"><a href="#cb2-36" tabindex="-1" aria-label="code-block-2-36"></a>                pytest --mpl --regtest</span></code></pre>
 </div>
 <p>This is a simple GitHub Action that runs the tests for your code
 whenever a pull request is made to the main branch.</p>
@@ -541,16 +541,16 @@ subtracts two numbers, but make it wrong on purpose:</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="kw">def</span> subtract(a, b):</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="kw">def</span> subtract(a, b):</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 <ul><li>Then add a test for this function in your
 <code>test_calculator.py</code> file:</li>
 </ul><div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="kw">def</span> test_subtract():</span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>    <span class="cf">assert</span> subtract(<span class="dv">5</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">2</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="kw">def</span> test_subtract():</span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a>    <span class="cf">assert</span> subtract(<span class="dv">5</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">2</span></span></code></pre>
 </div>
 <ul><li><p>Commit the changes using <code>git add -u .</code> and
 <code>git commit -m "Add subtract function"</code></p></li>
@@ -649,7 +649,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.0" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main" class="external-link">varnish (1.0.7)</a> [UoS fork]</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main" class="external-link">varnish (1.0.7)</a> [UoS fork]</p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -671,8 +671,8 @@ any links that you are not going to use.
   "url": "https://sylviawhittle.github.io/python-testing-for-research/10-CI.html",
   "identifier": "https://sylviawhittle.github.io/python-testing-for-research/10-CI.html",
   "dateCreated": "2024-03-08",
-  "dateModified": "2026-04-14",
-  "datePublished": "2026-04-14"
+  "dateModified": "2026-04-21",
+  "datePublished": "2026-04-21"
 }
 
   </script><script>

@@ -245,7 +245,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#running-pytest">Running pytest</a></li>
 <li><a href="#test-output">Test output</a></li>
@@ -378,7 +378,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Interacting with Tests</h1>
-        <p>Last updated on 2026-04-14 |
+        <p>Last updated on 2026-04-21 |
 
         <a href="https://github.com/SylviaWhittle/python-testing-for-research/edit/main/episodes/03-interacting-with-tests.Rmd" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -450,24 +450,24 @@ code:</li>
 </ul><div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">def</span> power(value, exponent):</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>    <span class="co">"""Raise a value to an exponent"""</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>    result <span class="op">=</span> value</span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(exponent<span class="op">-</span><span class="dv">1</span>):</span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>        result <span class="op">*=</span> value</span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>    <span class="cf">return</span> result</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="kw">def</span> power(value, exponent):</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>    <span class="co">"""Raise a value to an exponent"""</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>    result <span class="op">=</span> value</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(exponent<span class="op">-</span><span class="dv">1</span>):</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>        result <span class="op">*=</span> value</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a>    <span class="cf">return</span> result</span></code></pre>
 </div>
 <ul><li>In the <code>test_advanced_calculator.py</code> file, add the
 following test:</li>
 </ul><div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="im">from</span> advanced_calculator <span class="im">import</span> power</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="kw">def</span> test_power():</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>    <span class="co">"""Test for the power function"""</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>    <span class="cf">assert</span> power(<span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">8</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>    <span class="cf">assert</span> power(<span class="dv">3</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">27</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="im">from</span> advanced_calculator <span class="im">import</span> power</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="kw">def</span> test_power():</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a>    <span class="co">"""Test for the power function"""</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a>    <span class="cf">assert</span> power(<span class="dv">2</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">8</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a>    <span class="cf">assert</span> power(<span class="dv">3</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="dv">27</span></span></code></pre>
 </div>
 <ul><li>Now run <code>pytest</code> in the terminal. You should see that all
 tests pass due to the <span style="color:green">green</span>
@@ -650,7 +650,7 @@ the tests fail where necessary to see what happens.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul><li><p>Run <code>pytest -v</code> to see more detailed output.</p></li>
 <li><p>Run <code>pytest -q</code> to see less detailed output.</p></li>
@@ -734,7 +734,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.0" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main" class="external-link">varnish (1.0.7)</a> [UoS fork]</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.20.1" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main" class="external-link">varnish (1.0.7)</a> [UoS fork]</p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -756,8 +756,8 @@ any links that you are not going to use.
   "url": "https://sylviawhittle.github.io/python-testing-for-research/03-interacting-with-tests.html",
   "identifier": "https://sylviawhittle.github.io/python-testing-for-research/03-interacting-with-tests.html",
   "dateCreated": "2024-03-08",
-  "dateModified": "2026-04-14",
-  "datePublished": "2026-04-14"
+  "dateModified": "2026-04-21",
+  "datePublished": "2026-04-21"
 }
 
   </script><script>
