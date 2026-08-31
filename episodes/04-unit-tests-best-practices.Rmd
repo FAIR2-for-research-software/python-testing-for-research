@@ -8,7 +8,6 @@ exercises: 2
 
 - What to do about complex functions & tests?
 - What are some best practices for testing?
-- How far should I go with testing?
 - How do I add tests to an existing project?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -439,21 +438,3 @@ that the output is still 23 when you make changes to the code.
 
 After adding regression tests, you can start adding unit tests to the individual functions in your code, starting with the more commonly used / likely to break functions such as ones
 that handle data processing or input/output.
-
-## Should we aim for 100% test coverage?
-
-Although tests add reliability to your code, it's not always practicable to spend so much development time writing tests.
-When time is limited, it's often better to only write tests for the most critical parts of the code as opposed to rigorously testing every function.
-
-You should discuss with your team how much of the code you think should be tested, and what the most critical parts of the code are in order to prioritize your time.
-
-::::::::::::::::::::::::::::::::::::: keypoints
-
-- Complex functions can be broken down into smaller, testable units.
-- Testing each unit separately is called unit testing.
-- The AAA pattern is a good way to structure your tests.
-- Test driven development can help you to write clean, maintainable code.
-- Randomness in tests can be made deterministic using random seeds.
-- Adding tests to an existing project can be done incrementally, starting with regression tests.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
